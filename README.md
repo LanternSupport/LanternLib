@@ -1,6 +1,6 @@
 # LanternLib
 
-A sleek, modern dark cyan UI library for Roblox scripting, built with clean design aesthetics and complete configuration management.
+A sleek, modern dark red UI library for Roblox scripting, built with clean design aesthetics and complete configuration management.
 
 ## 🚀 Quick Start
 

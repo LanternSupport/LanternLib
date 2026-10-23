@@ -1,6 +1,6 @@
 --[[
     =============================================================================
-    LanternUI - Modern Minimal Dark Cyan Interface Example
+    LanternUI - Modern Minimal Dark Red Interface Example
     =============================================================================
     A comprehensive reference example showcasing all features and components
     available in LanternUI (Engine, Controls, Containers, Themes, and Configs).
@@ -73,7 +73,7 @@ MainControls:AddToggle("AutoFarmToggle", {
 		print("[LanternUI] AutoFarm toggled:", Value)
 	end
 }):AddColorPicker("EspColorPrimary", {
-	Default = Color3.fromRGB(56, 189, 248), -- Cyan accent
+	Default = Color3.fromRGB(255, 0, 0), -- Red accent
 	Title = "Highlight Color",
 	Transparency = 0,
 	Callback = function(Value, Transparency)
@@ -127,7 +127,7 @@ MainControls:AddDivider()
 
 -- Labels with wrapping support
 MainControls:AddLabel("Status: Active and running.", false, "StatusLabel")
-MainControls:AddLabel("Multiline label:\nLanternUI provides clean dark cyan styling.", true)
+MainControls:AddLabel("Multiline label:\nLanternUI provides clean dark red styling.", true)
 
 -- [Left 2] Sliders & Inputs Groupbox
 local SlidersGroup = Tabs.Main:AddLeftGroupbox("Sliders & Inputs")

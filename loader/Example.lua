@@ -1,7 +1,7 @@
 -- ==============================================================================
 -- LANTERNLIB - OFFICIAL LOADER EXAMPLE
 -- Demonstrates Key Authentication, Auto-Save System, and Payload Launch
--- Design Language: Modern Minimal Dark Cyan (Matching Loaderdesign.svg 1:1)
+-- Design Language: Modern Minimal Dark Red (Matching Loaderdesign.svg 1:1)
 -- ==============================================================================
 
 local repo = "https://raw.githubusercontent.com/LanternSupport/LanternLib/main/"
@@ -115,7 +115,7 @@ local window = LoaderLib:CreateWindow({
 local savedKey = loadSavedKey()
 if savedKey and #savedKey >= 5 then
     window:SetKeyText(savedKey)
-    window:SetStatus("Saved key detected. Auto-authenticating...", Color3.fromRGB(56, 189, 248))
+    window:SetStatus("Saved key detected. Auto-authenticating...", Color3.fromRGB(255, 0, 0))
     task.delay(0.5, function()
         verifyAndExecute(savedKey, window, nil, true)
     end)

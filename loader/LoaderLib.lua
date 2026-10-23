@@ -1,6 +1,6 @@
 -- ==============================================================================
 -- LANTERNLIB - OFFICIAL LOADER LIBRARY (ENGINE)
--- Design: Modern Minimal Dark Cyan (Strict 1:1 with Loaderdesign.svg)
+-- Design: Modern Minimal Dark Red (Strict 1:1 with Loaderdesign.svg)
 -- Dimensions: 550 x 180 px | Font: Enum.Font.Code | Corner: 2px
 -- ==============================================================================
 
@@ -28,7 +28,7 @@ local Tokens = {
     HoverColor          = Color3.fromRGB(28, 28, 28),      -- #1C1C1C (Button Hover)
     
     AccentColor         = Color3.fromRGB(255, 0, 0),       -- #ff0000 (Red Accent)
-    AccentColorDark     = Color3.fromRGB(30, 130, 180),    -- Hover Accent
+    AccentColorDark     = Color3.fromRGB(180, 0, 0),       -- Hover Accent (Dark Red)
     
     OutlineColor        = Color3.fromRGB(50, 50, 50),      -- #323232 (Subtle Borders)
     HoverOutlineColor   = Color3.fromRGB(80, 80, 80),      -- #505050 (Hover Borders)
@@ -130,7 +130,7 @@ function LoaderLib:CreateWindow(config)
     local RootStroke = Instance.new("UIStroke")
     RootStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
     RootStroke.Thickness = Tokens.StrokeThickness
-    RootStroke.Color = Tokens.AccentColor -- Cyan accent outline
+    RootStroke.Color = Tokens.AccentColor -- Red accent outline
     RootStroke.Parent = Root
 
     -- 3. Header: Title (Exact Y: 24 in SVG)
@@ -264,7 +264,7 @@ function LoaderLib:CreateWindow(config)
     local SubmitStroke = Instance.new("UIStroke")
     SubmitStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
     SubmitStroke.Thickness = Tokens.StrokeThickness
-    SubmitStroke.Color = Tokens.AccentColor -- Cyan Accent Highlighted Border
+    SubmitStroke.Color = Tokens.AccentColor -- Red Accent Highlighted Border
     SubmitStroke.Parent = SubmitBtn
 
     local SubmitLabel = Instance.new("TextLabel")

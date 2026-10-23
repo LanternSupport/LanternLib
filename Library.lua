@@ -761,7 +761,7 @@ function Library:AddToolTip(InfoStr, DisabledInfoStr, HoverInstance)
 
     local TooltipStroke = Library:ApplyStroke(Tooltip, "OutlineColor", 1)
 
-    -- Left Cyan Accent Line (Matching Notification Style)
+    -- Left Red Accent Line (Matching Notification Style)
     local AccentLine = Library:Create("Frame", {
         Name = "AccentLine";
         BackgroundColor3 = Library.AccentColor;
@@ -4234,7 +4234,7 @@ do
 
             ToggleLabel.TextColor3 = Toggle.Risky and Library.RiskColor or Color3.new(1, 1, 1)
 
-            -- OFF is #323232 (Color3.fromRGB(50, 50, 50)), ON is #38BDF8 (Library.AccentColor)
+            -- OFF is #323232 (Color3.fromRGB(50, 50, 50)), ON is #ff0000 (Library.AccentColor)
             ToggleInner.BackgroundColor3 = Toggle.Value and Library.AccentColor or Color3.fromRGB(50, 50, 50)
             ToggleStroke.Color = Toggle.Value and Library.AccentColor or Library.OutlineColor
 
