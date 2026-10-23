@@ -20,34 +20,12 @@
     =============================================================================
 --]]
 
--- [1] Module Loader (Loads directly from GitHub Raw with local workspace fallback for testing)
+-- [1] Module Loader (Direct GitHub Raw)
 local repo = "https://raw.githubusercontent.com/LanternSupport/LanternLib/main/"
 
-local function loadModule(relPath)
-	-- Local executor workspace fallback (if developing locally)
-	if readfile and isfile then
-		if isfile("LanternLib/" .. relPath) then
-			return loadstring(readfile("LanternLib/" .. relPath))()
-		elseif isfile(relPath) then
-			return loadstring(readfile(relPath))()
-		end
-	end
-
-	-- Remote GitHub Raw
-	local success, content = pcall(function()
-		return game:HttpGet(repo .. relPath)
-	end)
-
-	if success and content and #content > 0 and not content:find("404: Not Found") then
-		return loadstring(content)()
-	end
-
-	error("[LanternLib] Failed to load module: " .. tostring(relPath))
-end
-
-local Library = loadModule("Library.lua")
-local ThemeManager = loadModule("addons/ThemeManager.lua")
-local SaveManager = loadModule("addons/SaveManager.lua")
+local Library = loadstring(game:HttpGet(repo .. "Library.lua"))()
+local ThemeManager = loadstring(game:HttpGet(repo .. "addons/ThemeManager.lua"))()
+local SaveManager = loadstring(game:HttpGet(repo .. "addons/SaveManager.lua"))()
 
 -- Direct access tables added by Library to global / environment
 local Options = Library.Options
