@@ -183,7 +183,7 @@ local Library = {
     MainColor = Color3.fromRGB(20, 20, 20);
     BackgroundColor = Color3.fromRGB(20, 20, 20);
 
-    AccentColor = Color3.fromRGB(56, 189, 248);
+    AccentColor = Color3.fromRGB(255, 0, 0);                    -- #ff0000 (Red Accent)
     DisabledAccentColor = Color3.fromRGB(142, 142, 142);
 
     OutlineColor = Color3.fromRGB(50, 50, 50);

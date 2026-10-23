@@ -45,7 +45,7 @@ do
     ThemeManager.Folder = "LanternLib"
     ThemeManager.Library = nil
     ThemeManager.BuiltInThemes = {
-        ['Default'] = { 1, { FontColor = "ffffff", MainColor = "141414", AccentColor = "38bdf8", BackgroundColor = "141414", OutlineColor = "323232" } },
+        ['Default'] = { 1, { FontColor = "ffffff", MainColor = "141414", AccentColor = "ff0000", BackgroundColor = "141414", OutlineColor = "323232" } },
     }
 
     function ThemeManager:SetLibrary(library)

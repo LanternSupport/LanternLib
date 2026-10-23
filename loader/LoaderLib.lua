@@ -27,7 +27,7 @@ local Tokens = {
     DarkBackgroundColor = Color3.fromRGB(18, 18, 18),      -- #121212 (Input Box Inner)
     HoverColor          = Color3.fromRGB(28, 28, 28),      -- #1C1C1C (Button Hover)
     
-    AccentColor         = Color3.fromRGB(56, 189, 248),    -- #38BDF8 (Sky/Cyan Accent)
+    AccentColor         = Color3.fromRGB(255, 0, 0),       -- #ff0000 (Red Accent)
     AccentColorDark     = Color3.fromRGB(30, 130, 180),    -- Hover Accent
     
     OutlineColor        = Color3.fromRGB(50, 50, 50),      -- #323232 (Subtle Borders)
