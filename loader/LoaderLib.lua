@@ -4,16 +4,16 @@
 -- Dimensions: 550 x 180 px | Font: Enum.Font.Code | Corner: 2px
 -- ==============================================================================
 
-local cloneref = (cloneref or clonereference or function(instance: any)
+local cloneref = (cloneref or clonereference or function(instance)
     return instance
 end)
 
-local UserInputService: UserInputService = cloneref(game:GetService("UserInputService"))
-local TweenService: TweenService = cloneref(game:GetService("TweenService"))
-local CoreGui: CoreGui = cloneref(game:GetService("CoreGui"))
-local Players: Players = cloneref(game:GetService("Players"))
-local HttpService: HttpService = cloneref(game:GetService("HttpService"))
-local AnalyticsService: AnalyticsService = cloneref(game:GetService("RbxAnalyticsService"))
+local UserInputService = cloneref(game:GetService("UserInputService"))
+local TweenService = cloneref(game:GetService("TweenService"))
+local CoreGui = cloneref(game:GetService("CoreGui"))
+local Players = cloneref(game:GetService("Players"))
+local HttpService = cloneref(game:GetService("HttpService"))
+local AnalyticsService = cloneref(game:GetService("RbxAnalyticsService"))
 
 local LocalPlayer = Players.LocalPlayer or Players.PlayerAdded:Wait()
 local setclipboard = setclipboard or (syn and syn.write_clipboard) or function() end

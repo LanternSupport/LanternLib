@@ -9,15 +9,21 @@ local repo = "https://raw.githubusercontent.com/LanternSupport/LanternLib/main/"
 -- [1] Load LoaderLib Module
 local LoaderLib = nil
 do
-    -- Local executor test check (if developing locally)
+    local source = nil
     if readfile and isfile and isfile("loader/LoaderLib.lua") then
-        LoaderLib = loadstring(readfile("loader/LoaderLib.lua"))()
+        source = readfile("loader/LoaderLib.lua")
     elseif readfile and isfile and isfile("LanternLib/loader/LoaderLib.lua") then
-        LoaderLib = loadstring(readfile("LanternLib/loader/LoaderLib.lua"))()
+        source = readfile("LanternLib/loader/LoaderLib.lua")
     else
-        -- GitHub Raw
-        LoaderLib = loadstring(game:HttpGet(repo .. "loader/LoaderLib.lua"))()
+        -- GitHub Raw (with cache-buster to prevent stale 404 cache)
+        source = game:HttpGet(repo .. "loader/LoaderLib.lua?t=" .. tostring(os.time()))
     end
+
+    local fn, err = loadstring(source)
+    if not fn then
+        error("[LanternLib] Failed to load LoaderLib: " .. tostring(err) .. "\nResponse: " .. tostring(source):sub(1, 100), 2)
+    end
+    LoaderLib = fn()
 end
 
 -- [2] Constants & Key File Paths
