@@ -85,7 +85,6 @@ LanternLib/
 ├── assets/              # UI textures & icons (with fallback to Roblox asset IDs)
 ├── loader/              # Key System Loader UI module
 │   ├── LoaderLib.lua    # Loader UI Engine (550x180 px)
-│   ├── Example.lua      # Key system showcase & auto-save example
-│   └── Loaderdesign.svg # Vector design reference
+│   └── Example.lua      # Generic Key system example
 └── README.md
 ```
